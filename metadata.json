@@ -1,5 +1,5 @@
 {
-  "description": "Hide the search entry from the overview and disable associated search (it's an easy way to avoid crashes with the lastests nvidia drivers). Don't hesitate to tell me if it works with other versions of GNOME.",
+  "description": "Hide the search entry from the overview and disable associated search (it's an easy way to avoid crashes with the lastests nvidia drivers). It should work with any version of GNOME 3, don't hesitate to tell me if it works with other versions of GNOME.",
   "name": "Disable Search",
   "original-author": "freeroot",
   "shell-version": [
@@ -7,5 +7,5 @@
   ],
   "url": "https://github.com/freeroot/DisableSearch",
   "uuid": "disable-search@asermax.com",
-  "version": 2
+  "version": 4
 }

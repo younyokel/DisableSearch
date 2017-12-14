@@ -9,13 +9,13 @@ function init() {
 }
 
 function enable() {
-	Main.overview._searchEntry.hide();
+	Main.overview._searchEntryBin.hide();
 	Main.overview._controls.viewSelector.startSearch = function(event) {};
 	Main.overview._controls.viewSelector._onTextChanged = function(se, prop) {};
 }
 
 function disable() {
-	Main.overview._searchEntry.show();
+	Main.overview._searchEntryBin.show();
 	Main.overview._controls.viewSelector.startSearch = this.SavedstartSearch;
 	Main.overview._controls.viewSelector._onTextChanged = this.SavedonTextChanged;
 }
