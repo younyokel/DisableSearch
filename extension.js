@@ -1,21 +1,28 @@
+/* 	No Search in Overview (c) freeroot */
+
 const Main = imports.ui.main;
 
-let SavedstartSearch;
-let SavedonTextChanged;
+// Initialize variables
+let originalStartSearch;
+let originalOnTextChanged;
 
 function init() {
-	this.SavedstartSearch = Main.overview._controls.viewSelector.startSearch;
-	this.SavedonTextChanged = Main.overview._controls.viewSelector._onTextChanged;
+	// Save original functions
+	originalStartSearch = Main.overview.viewSelector.startSearch;
+	originalOnTextChanged = Main.overview.viewSelector.onTextChanged;
 }
 
 function enable() {
-	Main.overview._searchEntryBin.hide();
-	Main.overview._controls.viewSelector.startSearch = function(event) {};
-	Main.overview._controls.viewSelector._onTextChanged = function(se, prop) {};
+	// Hide search entry and erase functionality
+	Main.overview.viewSelector.startSearch = function (event) { };
+	Main.overview.viewSelector.onTextChanged = function (se, prop) { };
+	Main.overview.searchEntry.hide();
 }
 
 function disable() {
-	Main.overview._searchEntryBin.show();
-	Main.overview._controls.viewSelector.startSearch = this.SavedstartSearch;
-	Main.overview._controls.viewSelector._onTextChanged = this.SavedonTextChanged;
+	// Show search entry and restore functions
+	Main.overview.viewSelector.startSearch = originalStartSearch;
+	Main.overview.viewSelector.onTextChanged = originalOnTextChanged;
+	Main.overview.searchEntry.show();
 }
+

@@ -1,11 +1,10 @@
 {
-  "description": "Hide the search entry from the overview and disable associated search (it's an easy way to avoid crashes with the lastests nvidia drivers). It should work with any version of GNOME 3, don't hesitate to tell me if it works with other versions of GNOME.",
-  "name": "Disable Search",
-  "original-author": "freeroot",
+  "description": "Remove the search entry in overview.",
+  "name": "No Search in Overview",
   "shell-version": [
-    "3.26"
+    "3.36"
   ],
-  "url": "https://github.com/freeroot/DisableSearch",
-  "uuid": "disable-search@asermax.com",
-  "version": 4
+  "url": "",
+  "uuid": "no-search-in-overview@freeroot",
+  "version": 1
 }
